@@ -7,7 +7,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.guiying.module.common.R;
 import com.guiying.module.common.utils.Utils;
 
@@ -35,6 +35,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewManager.getInstance().addActivity(this);
+	    //此处可以封装到baseActivity
+	    ARouter.getInstance().inject(this);
     }
 
 

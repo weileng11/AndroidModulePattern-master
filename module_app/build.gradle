@@ -77,8 +77,9 @@ dependencies {
     implementation deps.support.multidex
     implementation project(':lib_common')
     if (!isModule.toBoolean()) {
-        implementation project(':module_girls')
+		implementation project(':module_data_transmit')
         implementation project(':module_news')
+		implementation project(':module_girls')
 		implementation project(':module_main')
     }
 }

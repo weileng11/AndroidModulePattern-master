@@ -4,15 +4,12 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.view.MenuItem;
-
-import com.guiying.module.common.base.BaseActivity;
-import com.guiying.module.common.base.BaseFragment;
-import com.guiying.module.common.base.ClassUtils;
-import com.guiying.module.common.base.IViewDelegate;
-import com.guiying.module.common.base.ViewManager;
+import com.guiying.module.common.base.*;
+import com.guiying.module.common.utils.FragmentUtils;
 import com.guiying.module.common.widget.NoScrollViewPager;
-
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,7 +22,7 @@ import java.util.List;
 public class BottomNavigationActivity extends BaseActivity {
 
     private NoScrollViewPager mPager;
-    private List<BaseFragment> mFragments;
+    private List<Fragment> mFragments=new ArrayList<>();;
     private FragmentAdapter mAdapter;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -59,9 +56,15 @@ public class BottomNavigationActivity extends BaseActivity {
     }
 
     private void initViewPager() {
-        mFragments = ViewManager.getInstance().getAllFragment();//这几个Fragment是主动添加到ViewManager中的
-        BaseFragment newsFragment = getNewsFragment();//主动寻找
-        mFragments.add(newsFragment);
+	    //mFragments = ViewManager.getInstance().getAllFragment();//这几个Fragment是主动添加到ViewManager中的
+	    //BaseFragment newsFragment = getNewsFragment();//主动寻找
+	    //mFragments.add(newsFragment);
+	
+	    mFragments.clear();
+	    mFragments.add(FragmentUtils.getHomeFragment());
+	    mFragments.add(FragmentUtils.getChatFragment());
+	    mFragments.add(FragmentUtils.getChatFragment());
+	    
         mPager = (NoScrollViewPager) findViewById(R.id.container_pager);
         mAdapter = new FragmentAdapter(getSupportFragmentManager(), mFragments);
         mPager.setPagerEnabled(false);

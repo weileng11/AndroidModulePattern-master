@@ -6,13 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.guiying.module.common.base.BaseFragment;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
+@Route(path = "/news/new")
 public class NewsFragment extends BaseFragment {
 
     /**

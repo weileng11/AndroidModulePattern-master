@@ -7,6 +7,13 @@ android {
         targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
+		
+		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+		javaCompileOptions {
+			annotationProcessorOptions {
+				arguments = [ moduleName : project.getName() ]
+			}
+		}
     }
 
 
@@ -68,9 +75,16 @@ dependencies {
     api deps.toasty
 
     //router
-    api deps.arouter_api
+//    api deps.arouter_api
+//	compile 'com.alibaba:arouter-api:1.3.1'
+//	annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+	
+	compile 'com.alibaba:arouter-api:1.3.1'
+	annotationProcessor "com.alibaba:arouter-compiler:1.1.4"
 
     //annotationProcessor
     annotationProcessor deps.dagger.android_support_compiler
     annotationProcessor deps.dagger.compiler
+	
+	compile 'com.alibaba:fastjson:1.2.9'
 }

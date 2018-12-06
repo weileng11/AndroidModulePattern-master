@@ -28,5 +28,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Fragment" />
+	
+	<Button
+		android:id="@+id/data_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="组件化数据传递" />
 
 </LinearLayout>

@@ -55,6 +55,8 @@ Android项目组件化示例代码
 3. 声明APP需要的uses-permission；
 4. 定义全局通用的主题（Theme）；
 
+## 加入了阿里路由测试，以及其它类
+
 ## License
 
     Copyright 2017 guiying712, AndroidModulePattern Open Source Project

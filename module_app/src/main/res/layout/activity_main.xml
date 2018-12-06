@@ -28,5 +28,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Fragment" />
-
+	
+	<Button
+		android:id="@+id/data_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="组件化数据传递" />
+	
+	<Button
+		android:id="@+id/data_aiam_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="组件化带动画跳转" />
+	<Button
+		android:id="@+id/data_url_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="组件化url跳转" />
 </LinearLayout>

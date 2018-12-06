@@ -18,7 +18,7 @@ public class MyDelegate implements IApplicationDelegate {
     @Override
     public void onCreate() {
         //主动添加
-        ViewManager.getInstance().addFragment(0, GirlsFragment.newInstance());
+        ViewManager.getInstance().addFragment(1, GirlsFragment.newInstance());
     }
 
     @Override

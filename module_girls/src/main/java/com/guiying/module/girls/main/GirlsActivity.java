@@ -7,7 +7,7 @@ import com.guiying.module.common.base.BaseActionBarActivity;
 import com.guiying.module.girls.R;
 
 @Route(path = "/girls/list")
-public class GirlsActivity extends BaseActionBarActivity {
+public class GirlsActivity extends BaseActionBarActivity{
 
     private GirlsView mView;
     private GirlsContract.Presenter mPresenter;
@@ -16,11 +16,11 @@ public class GirlsActivity extends BaseActionBarActivity {
     protected int setTitleId() {
         return R.string.girls_activity_title;
     }
-
-    @Override
+	
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mView = new GirlsView(this);
+		mView = new GirlsView(this);
         setContentView(mView);
         mPresenter = new GirlsPresenter(mView);
         mPresenter.start();

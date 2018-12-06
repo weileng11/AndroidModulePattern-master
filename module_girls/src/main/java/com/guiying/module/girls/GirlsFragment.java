@@ -1,18 +1,18 @@
 package com.guiying.module.girls;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.guiying.module.common.base.BaseFragment;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
+@Route(path = "/girls/girl")
 public class GirlsFragment extends BaseFragment {
 
     /**
